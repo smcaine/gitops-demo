@@ -75,11 +75,12 @@ kubectl create ns fluxcd
 ```
 
 Install Flux by specifying your fork URL (replace `fluxcd` with your GitHub username): 
-
+(notice the poll interval is set to 1m, just for demo purposes)
 ```bash
 helm upgrade -i flux fluxcd/flux --wait \
 --namespace fluxcd \
---set git.url=git@github.com:fluxcd/helm-operator-get-started
+--set git.url=git@github.com:<your repo> \
+--set git.pollInterval=1m
 ```
 
 Install the `HelmRelease` Kubernetes custom resource definition:
