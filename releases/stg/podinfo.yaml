@@ -10,7 +10,7 @@ metadata:
 spec:
   releaseName: podinfo-rc
   chart:
-    git: git@github.com:<your repo>
+    git: git@github.com:smcaine/gitops-demo.git
     path: charts/podinfo
     ref: master
   values:
