@@ -16,7 +16,7 @@ spec:
   values:
     image:
       repository: schaga/podinfo
-      tag: dev-hdtwcel9
+      tag: dev-fkhc0mqj
     replicaCount: 1
     hpa:
       enabled: false
