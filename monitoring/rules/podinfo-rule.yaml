@@ -1,0 +1,23 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  creationTimestamp: null
+  labels:
+    prometheus: k8s
+    role: alert-rules
+  name: gitopsdemo2
+  namespace: monitoring
+spec:
+  groups:
+  - name: gitopsdemo2.rules
+    rules:
+    - alert: gitopsdemo
+      expr: sum(rate(http_request_duration_seconds_count{service=~".*podinfo.*", status=~"2.."}[1m])) / sum(rate(http_request_duration_seconds_count{service=~".*podinfo.*"}[1m])) > 0.1
+      for: 1m
+      labels:
+        severity: critical
+      annotations:
+        description: This is a test alert.
+        summary: "5xx errors on podinfo"
+        impact: "workshop attendees cannot get podinfo {{ $labels.service }}"
+        playbookUrl: "https://example.com/playbooks/PodInfoHighErrorRate"
