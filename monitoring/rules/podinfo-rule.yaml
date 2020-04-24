@@ -12,7 +12,7 @@ spec:
   - name: gitopsdemo2.rules
     rules:
     - alert: gitopsdemo
-      expr: sum(rate(http_request_duration_seconds_count{service=~".*podinfo.*", status=~"2.."}[1m])) / sum(rate(http_request_duration_seconds_count{service=~".*podinfo.*"}[1m])) > 0.1
+      expr: sum(rate(http_request_duration_seconds_count{service=~".*podinfo.*", status=~"5.."}[1m])) / sum(rate(http_request_duration_seconds_count{service=~".*podinfo.*"}[1m])) > 0.1
       for: 1m
       labels:
         severity: critical
