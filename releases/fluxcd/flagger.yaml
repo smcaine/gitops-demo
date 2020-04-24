@@ -12,11 +12,11 @@ spec:
   values:
     meshProvider: nginx
     metricsServer: "http://prometheus-k8s.monitoring:9090"
-    slack:
-      channel: gitops-demo
-    env:
-      - name: SLACK_URL
-        valueFrom:
-          secretKeyRef:
-            name: slackurl
-            key: url
+    # slack:
+    #   channel: gitops-demo
+    # env:
+    #   - name: SLACK_URL
+    #     valueFrom:
+    #       secretKeyRef:
+    #         name: slackurl
+    #         key: url
