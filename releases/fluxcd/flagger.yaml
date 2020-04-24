@@ -18,5 +18,5 @@ spec:
         - name: SLACK_URL
           valueFrom:
             secretKeyRef:
-              name: slack_url
+              name: slackurl
               key: url
