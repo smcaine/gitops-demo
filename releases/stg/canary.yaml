@@ -44,11 +44,12 @@ spec:
     stepWeight: 5
     # NGINX Prometheus checks
     metrics:
-    - name: "latency"
+    - name: "success_rate"
       templateRef:
-        name: latency
+        name: success_rate
+        namespace: stg
       thresholdRange:
-        max: 0.5
+        max: 0.1
       interval: 1m
     # testing (optional)
     webhooks:
