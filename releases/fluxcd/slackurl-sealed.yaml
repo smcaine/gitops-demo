@@ -1,0 +1,17 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: slack_url
+  namespace: fluxcd
+spec:
+  encryptedData:
+    url: AgA7WSjti1JPIVZAxE1jdgQ814MsIvOoue89dxLErmPoIiLRZs1DavU+ZJKYrk1W0tWpPhCOUaLoUOom6v5dB4A39UACzLAoo5TBDRWqwkYBkc6T0MxXnBnYNpA2mjJhrR2qMzcVr2A5U+Ly0DLOW/UGpTaQqhiG7Qm7VLlfRtEZ/XOUSiiund/rKkiReaZ9Wjnyzjuzn8lneG67HnrLHJfjDxK0FklYgSI/gDaVErDZqmEgkDbjPGGhfwvg1khCiy2SjiOu2sDm76HTYJcq61eI5y33x1ZO45fbc0TeQI263ta4eo7GXji5fOVwSFod0UnJCOo8nFPUdunaxxphv6RK5ArJo5aaRA/xTUN9JXPOxpdGs/wqMVJDUES07KW9sDYCo2DElJGOz4WqnoPGWTLFUllA+1WSjgQBwNLUFqt/tirYC5vWkJi+fJTPxrWJwRD9Gnd8syY1nmjxjA8tVByZc+wykZFq5TswLXlzaLBBiVo3hYTlkNjc+6SPQL8CijS9y9Pl2sOj727LNqlbnwe134v4NX6FcT2SCylCqmo1Z4CholoYTZ5Cq2M5eXLEoPTt2I5Y5PxuDQ7gS197zuxPtvFd7UNwBDdiTeE2pIzhb/Kaoyoablz7yGr5DrQqyFR+tywz2oMl6YfP4+rx8J6CgWaNGtxK5KNAb1sL6E+7q6/iPXefyvao8rVnBOOl/xr8swFDUrZ/E+6VgNPwFjoUyTuDgd8xUC6dR3oADw8R5OejDy3+e9VZGn4ZNzDP/hw5D1sdtHRPzIga2FemZ/XtAXyCTzP4CqR9HGPH6bhhwInM
+  template:
+    metadata:
+      creationTimestamp: null
+      name: slack_url
+      namespace: fluxcd
+    type: Opaque
+status: {}
+

@@ -1,0 +1,22 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: flagger
+  namespace: fluxcd
+spec:
+  releaseName: flagger
+  chart:
+    repository: https://flagger.app
+    name: flagger
+    version: 1.0.0
+    values:
+      meshProvider: nginx
+      metricsServer: http://prometheus-k8s.monitoring:9090
+      slack:
+        channel: gitops-demo
+      env:
+        - name: SLACK_URL
+          valueFrom:
+            secretKeyRef:
+              name: slack_url
+              key: url
