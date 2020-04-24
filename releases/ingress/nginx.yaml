@@ -1,0 +1,17 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: nginx-controller
+  namespace: ingress
+spec:
+  releaseName: podinfo-dev
+  chart:
+    git: https://github.com/kubernetes/ingress-nginx
+    name: nginx-ingress
+    version: 1.36.3
+  values:
+    service:
+      controller:
+        serviceMonitor:
+          enabled: true
