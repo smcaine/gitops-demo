@@ -44,9 +44,9 @@ spec:
     stepWeight: 5
     # NGINX Prometheus checks
     metrics:
-    - name: "success_rate"
+    - name: "success-rate"
       templateRef:
-        name: success_rate
+        name: success-rate
         namespace: stg
       thresholdRange:
         max: 0.1

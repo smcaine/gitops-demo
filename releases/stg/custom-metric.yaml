@@ -1,7 +1,7 @@
 apiVersion: flagger.app/v1beta1
 kind: MetricTemplate
 metadata:
-  name: success_rate
+  name: success-rate
   namespace: stg
 spec:
   provider:
