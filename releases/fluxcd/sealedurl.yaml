@@ -1,0 +1,14 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  name: slackurl
+  namespace: fluxcd
+spec:
+  encryptedData:
+    url: AgBR3zmAq7o/Qj+5uH6Z+YZJMz+8nbd9ilVTZ/1wAf5pEvOebd3LVJQff6pN8ck5UchHA3JB4wzczHaqrrZlUfE5oHwVtMSJGOLFxCSjjHAqY0gowaqfju3GLQbNDtSxdZxTTCQF9xRRTdc319k/pbTizqK1LEnPRfyDV90GgFaW4I2gPiQbs1jlVrYDExW+RNuYtt5TsJjXuESU827nP6bV5FSYGO4nBDcXLkaXIu4T8l9rC1dzp8+9uvnw9eSLLOj38b+JSBA0iiDCiIN2cyl+0ZLSSK+HCNIV5ES2kD/do82udEv0ta1Zf2T/6sX3bKPE6OmgBSnaQoMFMnA8HZZOPDwHDnjGW+3K18jY/8OTeDuzI5gLzKklHftiCytajkZMZO2InK5JuxY3aWdvVet6Eg3ywBEUi7ugPU5kZ1DIXAHjQLSZd/gj5XycP2Iq/O1SdKaimRoaWiyucYeLvr8PUTZd9OblIC+ywdiNgFR77g1M9CF41b/cODLj1QOzNwnv1usiL10Xuqf562TEb50uv8XtNmA5K/3qs80F9G1i+3SgEx+zVdX4ddcvrTc3soPqSU28ztAaYT8b4V6jTURFxNCH5/4OYfweCB4a+LU31rGFeEYAu/hNxFUQocrhDIO3g0TGgQ/CW0yY/xR16NRqAo+ue/zPXSmsUlpyxo9g2QuTRFXt7RaPm5sfARAjb1u/xKI130nT/Y2LELUBM+ZE/SuBFt4A9BNnb3q7mCo/vy+mNgEh8nejgiYCG8hhH9SZ2b2DC0iW0BKD5u7BWLkg+jsaKrP2GBNE68wXoJ/sotIP
+  template:
+    metadata:
+      name: slackurl
+      namespace: fluxcd
+    type: Opaque
+
