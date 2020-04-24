@@ -41,11 +41,11 @@ spec:
     stepWeight: 5
     # NGINX Prometheus checks
     metrics:
-    - name: request-success-rate
-      # minimum req success rate (non 5xx responses)
-      # percentage (0-100)
+    - name: "latency"
+      templateRef:
+        name: latency
       thresholdRange:
-        min: 99
+        max: 0.5
       interval: 1m
     # testing (optional)
     webhooks:

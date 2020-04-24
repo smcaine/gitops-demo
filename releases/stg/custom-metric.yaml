@@ -1,0 +1,20 @@
+apiVersion: flagger.app/v1beta1
+kind: MetricTemplate
+metadata:
+  name: latency
+  namespace: stg
+spec:
+  provider:
+    type: prometheus
+    address: http://promethues-k8s.monitoring:9090
+  query: |
+    histogram_quantile(0.99,
+      sum(
+        rate(
+          http_request_duration_seconds_bucket{
+            kubernetes_namespace="stg",
+            kubernetes_pod_name="podinfo-rc"
+          }[1m]
+        )
+      ) by (le)
+    )
