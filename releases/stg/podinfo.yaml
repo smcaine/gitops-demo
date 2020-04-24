@@ -16,7 +16,7 @@ spec:
   values:
     image:
       repository: schaga/podinfo
-      tag: stg-cqpvl75u
+      tag: stg-dj6ycmlr
     replicaCount: 2
     hpa:
       enabled: true
