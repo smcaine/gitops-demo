@@ -9,7 +9,6 @@ spec:
   - http:
       paths:
       - path: /podinfo-dev
-        pathType: Prefix
         backend:
           serviceName: podinfo-dev
           servicePort: http
