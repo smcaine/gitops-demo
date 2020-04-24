@@ -1,0 +1,11 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: flagger-loadtester
+  namespace: fluxcd
+spec:
+  releaseName: loadtester
+  chart:
+    repository: https://flagger.app
+    name: loadtester
+    version: 0.16.0

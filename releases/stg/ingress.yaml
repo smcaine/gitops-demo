@@ -1,15 +1,15 @@
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
-  name: podinfo-dev
-  namespace: dev
+  name: podinfo-rc
+  namespace: stg
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
   - http:
       paths:
-      - path: /podinfo-dev
+      - path: /podinfo-rc
         backend:
-          serviceName: podinfo-dev
+          serviceName: podinfo-rc
           servicePort: http
