@@ -8,13 +8,15 @@ spec:
     type: prometheus
     address: http://promethues-k8s.monitoring:9090
   query: |
-    histogram_quantile(0.99,
+    sum(
+    rate(
+    http_request_duration_seconds_count{
+      service=~".*podinfo.*", 
+      status=~"5.."}[1m])) 
+      / 
       sum(
-        rate(
-          http_request_duration_seconds_bucket{
-            namespace="stg",
-            pod="podinfo-rc"
-          }[1m]
+      rate(
+      http_request_duration_seconds_count{
+        service=~".*podinfo.*"}[1m]
         )
-      ) by (le)
-    )
+      )
