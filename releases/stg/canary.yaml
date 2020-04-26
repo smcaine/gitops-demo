@@ -10,19 +10,16 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: podinfo-rc
-    namespace: stg
   # ingress reference
   ingressRef:
     apiVersion: networking.k8s.io/v1beta1
     kind: Ingress
     name: podinfo-rc
-    namespace: stg
   # HPA reference (optional)
   autoscalerRef:
     apiVersion: autoscaling/v2beta1
     kind: HorizontalPodAutoscaler
     name: podinfo-rc
-    namespace: stg
   # the maximum time in seconds for the canary deployment
   # to make progress before it is rollback (default 600s)
   progressDeadlineSeconds: 60
